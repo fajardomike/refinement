@@ -11,6 +11,13 @@ static std::string deptName(Department d) {
     return "Biotech & Wellness";
 }
 
+static void waitForEnter() {
+    // Prior code used `std::ws` + getline, which requires non-whitespace input.
+    // This pause reliably advances on an empty Enter press, even after `cin >> x`.
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+}
+
 void clearScreen() {
     // Keep it portable: just push previous content off-screen.
     for (int i = 0; i < 40; i++) std::cout << "\n";
@@ -40,8 +47,7 @@ std::string showBootScreen() {
     std::cout << "Your innie is now online.\n";
     std::cout << "Press ENTER to begin.\n";
 
-    std::string dummy;
-    std::getline(std::cin, dummy);
+    waitForEnter();
     clearScreen();
     return name;
 }
@@ -83,8 +89,7 @@ void showDaySummary(int day, int correct, int total, const std::string& message)
         "\n"
         "Press ENTER to proceed.\n";
 
-    std::string dummy;
-    std::getline(std::cin >> std::ws, dummy);
+    waitForEnter();
     clearScreen();
 }
 
@@ -108,8 +113,7 @@ void showWaffleParty(const Player& player) {
         "\n"
         "Press ENTER to exit.\n";
 
-    std::string dummy;
-    std::getline(std::cin >> std::ws, dummy);
+    waitForEnter();
 }
 
 void showTerminated(const Player& player) {
@@ -129,7 +133,6 @@ void showTerminated(const Player& player) {
         "Please return all thoughts to your supervisor.\n"
         "Press ENTER to exit.\n";
 
-    std::string dummy;
-    std::getline(std::cin >> std::ws, dummy);
+    waitForEnter();
 }
 
