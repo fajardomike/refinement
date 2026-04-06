@@ -1,12 +1,10 @@
 #include "player.h"
 #include <iostream>
 
-using namespace std;
-
-Player::Player(const string& name)
+Player::Player(const std::string& name)
     : name(name), score(0), quota(0.0f) {}
 
-string Player::getName() const {
+std::string Player::getName() const {
     return name;
 }
 
@@ -30,7 +28,7 @@ void Player::resetDailyScore() {
     score = 0;
 }
 
-ostream& operator<<(ostream& os, const Player& p) {
+std::ostream& operator<<(std::ostream& os, const Player& p) {
     os << "Employee : " << p.name << "\n";
     os << "Score    : " << p.score << "\n";
     os << "Quota    : " << p.quota << "%\n";
