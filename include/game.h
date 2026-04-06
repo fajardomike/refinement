@@ -2,6 +2,9 @@
 #include "player.h"
 #include "puzzlebank.h"
 #include "department.h"
+#include <string>
+#include <fstream>
+#include <cstdio>
 
 // LEAD (Member 3): Implement game.cpp
 class Game {
@@ -25,4 +28,9 @@ private:
 
     // Department assigned per day (fixed order)
     static const Department DAY_ORDER[3];
+
+    // --- Save / Load ---
+    void saveState(int currentDay, int scores[]);
+    bool loadState(std::string& outName, int& outDay, int scores[]);
+    void deleteSave();
 };

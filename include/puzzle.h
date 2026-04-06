@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 // Abstract base class for all puzzle types.
 // MathPuzzle, WordPuzzle, and SciencePuzzle must inherit from this.
@@ -20,8 +21,8 @@ public:
 
     // Getters
     std::string getQuestion() const;
-    std::string getChoice(int i) const;
-    int getCorrectIndex() const;
+    std::vector<std::string> getOptions() const;
+    std::string getAnswer() const;
 
     // Static counter — tracks total puzzles attempted across all instances
     static int totalAttempted;

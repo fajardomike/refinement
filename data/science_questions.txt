@@ -1,0 +1,8 @@
+What is the chemical symbol for gold?|Go|Gd|Au|Ag|2
+How many chromosomes does a normal human cell have?|23|42|46|48|2
+What is the chemical formula for water?|HO|H2O2|OH|H2O|3
+What planet is known as the Red Planet?|Venus|Mars|Jupiter|Saturn|1
+What gas do plants release during photosynthesis?|Oxygen|Carbon dioxide|Nitrogen|Hydrogen|0
+At what temperature does water boil at sea level?|90 degrees Celsius|100 degrees Celsius|110 degrees Celsius|120 degrees Celsius|1
+What is the largest organ in the human body?|Heart|Liver|Brain|Skin|3
+What is the approximate speed of light in a vacuum?|299,792,458 m/s|150,000,000 m/s|3,000,000 m/s|1,080,000,000 m/s|0

@@ -2,16 +2,16 @@
 #include "puzzle.h"
 #include "department.h"
 #include <vector>
+#include <string>
 
-// MEMBER 1: Implement puzzlebank.cpp
 // Holds and serves puzzles per department.
-// Puzzles are loaded from each derived class's getBank() method.
+// Puzzles are loaded from plain-text data files at runtime.
 class PuzzleBank {
 public:
     PuzzleBank();
     ~PuzzleBank();
 
-    // Load all puzzles from the three derived banks
+    // Load all puzzles from the three data files
     void loadAll();
 
     // Get 3 random non-repeating puzzles for a given department
@@ -22,4 +22,7 @@ private:
     std::vector<Puzzle*> mathPuzzles;
     std::vector<Puzzle*> wordPuzzles;
     std::vector<Puzzle*> sciencePuzzles;
+
+    // Reads a pipe-delimited question file and returns heap-allocated puzzles
+    std::vector<Puzzle*> loadFromFile(const std::string& filepath, Department dept);
 };

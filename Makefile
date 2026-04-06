@@ -1,10 +1,7 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Wextra
+CXXFLAGS = -std=c++17 -Wall -Wextra -Iinclude/
 
-SRCS = main.cpp game.cpp puzzle.cpp puzzlebank.cpp player.cpp \
-       mathpuzzle.cpp wordpuzzle.cpp sciencepuzzle.cpp \
-       messages.cpp display.cpp
-
+SRCS = $(wildcard src/*.cpp)
 OBJS = $(SRCS:.cpp=.o)
 TARGET = refinement
 
@@ -13,8 +10,8 @@ all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
-%.o: %.cpp
+src/%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -f src/*.o $(TARGET)

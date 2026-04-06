@@ -1,6 +1,5 @@
 #pragma once
 #include "puzzle.h"
-#include <vector>
 
 // Derived class for Science puzzles (Biotech & Wellness dept.)
 class SciencePuzzle : public Puzzle {
@@ -11,7 +10,4 @@ public:
 
     void display() const override;
     bool checkAnswer(int playerChoice) const override;
-
-    // Returns a vector of 8 hardcoded SciencePuzzle questions
-    static std::vector<SciencePuzzle> getBank();
 };

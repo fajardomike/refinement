@@ -1,8 +1,6 @@
 #include "puzzle.h"
 #include <iostream>
 
-// MEMBER 1: Implement all methods below
-
 int Puzzle::totalAttempted = 0;
 
 Puzzle::Puzzle(const std::string& question,
@@ -18,10 +16,10 @@ std::string Puzzle::getQuestion() const {
     return question;
 }
 
-std::string Puzzle::getChoice(int i) const {
-    return choices[i];
+std::vector<std::string> Puzzle::getOptions() const {
+    return std::vector<std::string>(choices, choices + 4);
 }
 
-int Puzzle::getCorrectIndex() const {
-    return correctIndex;
+std::string Puzzle::getAnswer() const {
+    return choices[correctIndex];
 }
