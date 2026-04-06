@@ -55,3 +55,8 @@ std::vector<SciencePuzzle> SciencePuzzle::getBank() {
 
     return bank;
 }
+
+// checkAnswer(): returns true if the player's choice matches the correct index
+bool SciencePuzzle::checkAnswer(int playerChoice) const {
+    return playerChoice == correctIndex;
+}
