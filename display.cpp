@@ -16,7 +16,7 @@ static void waitForEnterClean() {
     std::getline(std::cin, dummy);
 }
 
-static void waitForEnterAfterFormattedInput() {
+static void waitForEnter() {
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     waitForEnterClean();
 }
@@ -91,7 +91,7 @@ void showDaySummary(int day, int correct, int total, const std::string& message)
         "\n"
         "Press ENTER to proceed.\n";
 
-    waitForEnterAfterFormattedInput();
+    waitForEnter();
     clearScreen();
 }
 
@@ -115,7 +115,7 @@ void showWaffleParty(const Player& player) {
         "\n"
         "Press ENTER to exit.\n";
 
-    waitForEnterAfterFormattedInput();
+    waitForEnterClean();
 }
 
 void showTerminated(const Player& player) {
@@ -135,6 +135,6 @@ void showTerminated(const Player& player) {
         "Please return all thoughts to your supervisor.\n"
         "Press ENTER to exit.\n";
 
-    waitForEnterAfterFormattedInput();
+    waitForEnter();
 }
 
