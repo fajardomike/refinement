@@ -24,7 +24,7 @@ std::string showBootScreen() {
 
     std::cout <<
         "============================================================\n"
-        "                     L U M O N   I N D U S T R I E S\n"
+        "              L U M O N   I N D U S T R I E S\n"
         "============================================================\n"
         "Terminal Authorization: GRANTED\n"
         "Purpose: REFINEMENT\n"
@@ -93,7 +93,7 @@ void showWaffleParty(const Player& player) {
 
     std::cout <<
         "============================================================\n"
-        "                     WAFFLE PARTY AUTHORIZED\n"
+        "                  WAFFLE PARTY AUTHORIZED\n"
         "============================================================\n"
         "Your quota has been met.\n"
         "A measured celebration will now occur.\n"
@@ -117,7 +117,7 @@ void showTerminated(const Player& player) {
 
     std::cout <<
         "============================================================\n"
-        "                       TERMINATION NOTICE\n"
+        "                   TERMINATION NOTICE\n"
         "============================================================\n"
         "Your quota was not met.\n"
         "Access privileges have been revoked.\n"
