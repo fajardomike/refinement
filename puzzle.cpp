@@ -17,3 +17,7 @@ Puzzle::~Puzzle() {}
 std::string Puzzle::getQuestion() const {
     return question;
 }
+
+std::string Puzzle::getChoice(int i) const {
+    return choices[i];
+}
