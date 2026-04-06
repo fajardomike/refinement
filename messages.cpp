@@ -3,7 +3,6 @@
 #include <cstdlib>  // rand
 
 // Lumon-flavored message pools.
-// Tone: dry, corporate, slightly eerie.
 
 const std::vector<std::string> CORRECT_MESSAGES = {
     "Your compliance is noted and rewarded.",
