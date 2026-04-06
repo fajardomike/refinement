@@ -21,3 +21,7 @@ std::string Puzzle::getQuestion() const {
 std::string Puzzle::getChoice(int i) const {
     return choices[i];
 }
+
+int Puzzle::getCorrectIndex() const {
+    return correctIndex;
+}
