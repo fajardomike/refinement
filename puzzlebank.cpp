@@ -17,4 +17,8 @@ void PuzzleBank::loadAll() {
     auto mathBank = MathPuzzle::getBank();
     for (auto& puzz : mathBank)
         mathPuzzles.push_back(new MathPuzzle(puzz));
+
+    auto wordBank = WordPuzzle::getBank();
+    for (auto& puzz : wordBank)
+        wordPuzzles.push_back(new WordPuzzle(puzz));
 }
