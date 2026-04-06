@@ -15,13 +15,5 @@ Puzzle::Puzzle(const std::string& question,
 Puzzle::~Puzzle() {}
 
 std::string Puzzle::getQuestion() const {
-    // TODO
-}
-
-std::string Puzzle::getChoice(int i) const {
-    // TODO
-}
-
-int Puzzle::getCorrectIndex() const {
-    // TODO
+    return question;
 }
