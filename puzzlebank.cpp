@@ -12,3 +12,9 @@ PuzzleBank::~PuzzleBank() {
     for (Puzzle* p : wordPuzzles)    delete p;
     for (Puzzle* p : sciencePuzzles) delete p;
 }
+
+void PuzzleBank::loadAll() {
+    auto mathBank = MathPuzzle::getBank();
+    for (auto& puzz : mathBank)
+        mathPuzzles.push_back(new MathPuzzle(puzz));
+}
